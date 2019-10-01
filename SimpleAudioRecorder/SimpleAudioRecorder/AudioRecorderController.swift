@@ -20,7 +20,7 @@ class AudioRecorderController: UIViewController {
 		let formatting = DateComponentsFormatter()
 		formatting.unitsStyle = .positional // 00:00  mm:ss
 		// NOTE: DateComponentFormatter is good for minutes/hours/seconds
-		// DateComponentsFormatter not good for milliseconds, use DateFormatter instead
+		// DateComponentsFormatter not good for milliseconds, use DateFormatter instead)
 		formatting.zeroFormattingBehavior = .pad
 		formatting.allowedUnits = [.minute, .second]
 		return formatting
