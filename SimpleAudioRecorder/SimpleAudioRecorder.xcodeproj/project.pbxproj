@@ -13,6 +13,7 @@
 		BD8D4B762343EB1E001432F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD8D4B742343EB1E001432F7 /* LaunchScreen.storyboard */; };
 		BD8D4B7F2343EB38001432F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD8D4B7D2343EB38001432F7 /* Main.storyboard */; };
 		BD8D4B802343EB38001432F7 /* AudioRecorderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8D4B7E2343EB38001432F7 /* AudioRecorderController.swift */; };
+		BD8D4BA62343ECF5001432F7 /* piano.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD8D4BA52343ECF5001432F7 /* piano.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BD8D4B772343EB1E001432F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD8D4B7D2343EB38001432F7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BD8D4B7E2343EB38001432F7 /* AudioRecorderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorderController.swift; sourceTree = "<group>"; };
+		BD8D4BA52343ECF5001432F7 /* piano.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piano.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				BD8D4B7E2343EB38001432F7 /* AudioRecorderController.swift */,
 				BD8D4B7D2343EB38001432F7 /* Main.storyboard */,
 				BD8D4B722343EB1E001432F7 /* Assets.xcassets */,
+				BD8D4BA52343ECF5001432F7 /* piano.mp3 */,
 				BD8D4B742343EB1E001432F7 /* LaunchScreen.storyboard */,
 				BD8D4B772343EB1E001432F7 /* Info.plist */,
 			);
@@ -127,6 +130,7 @@
 			files = (
 				BD8D4B7F2343EB38001432F7 /* Main.storyboard in Resources */,
 				BD8D4B762343EB1E001432F7 /* LaunchScreen.storyboard in Resources */,
+				BD8D4BA62343ECF5001432F7 /* piano.mp3 in Resources */,
 				BD8D4B732343EB1E001432F7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
