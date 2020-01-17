@@ -17,11 +17,12 @@ class AudioRecorderController: UIViewController {
     @IBOutlet weak var timeSlider: UISlider!
     @IBOutlet weak var audioVisualizer: AudioVisualizer!
 	
-	private lazy var timeFormatter: DateComponentsFormatter = {
+	private lazy var timeIntervalFormatter: DateComponentsFormatter = {
+        // NOTE: DateComponentFormatter is good for minutes/hours/seconds
+        // DateComponentsFormatter is not good for milliseconds, use DateFormatter instead)
+        
 		let formatting = DateComponentsFormatter()
 		formatting.unitsStyle = .positional // 00:00  mm:ss
-		// NOTE: DateComponentFormatter is good for minutes/hours/seconds
-		// DateComponentsFormatter not good for milliseconds, use DateFormatter instead)
 		formatting.zeroFormattingBehavior = .pad
 		formatting.allowedUnits = [.minute, .second]
 		return formatting
@@ -29,14 +30,25 @@ class AudioRecorderController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
-
+        
+        // Use a font that won't jump around as values change
         timeLabel.font = UIFont.monospacedDigitSystemFont(ofSize: timeLabel.font.pointSize,
                                                           weight: .regular)
         timeRemainingLabel.font = UIFont.monospacedDigitSystemFont(ofSize: timeRemainingLabel.font.pointSize,
                                                                    weight: .regular)
+        
+        
 	}
 
+    // MARK: - Playback
+
+    
+    
+    // MARK: - Recording
+
+    
+    
+    // MARK: - Actions
 
     @IBAction func togglePlayback(_ sender: Any) {
 
