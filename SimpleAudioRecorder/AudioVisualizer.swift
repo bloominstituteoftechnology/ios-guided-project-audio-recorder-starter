@@ -8,7 +8,7 @@
 
 import UIKit
 
-//@IBDesignable
+@IBDesignable
 public class AudioVisualizer: UIView {
     
     // MARK: IBInspectable Properties
@@ -70,16 +70,10 @@ public class AudioVisualizer: UIView {
         #if TARGET_INTERFACE_BUILDER
         values = [0.7, 0.2, 0.9, 0.8, 0.76, 0.4, 0.2, 0.3, 0.4, 0.76, 0.4, 0.2, 0.3, 0.4, 0.76, 0.4, 0.2, 0.3, 0.4, 0.76, 0.4, 0.2, 0.3, 0.4]
         #endif
-        
-        // Build the inner bars
-        self.updateBars()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        
-        // Build the inner bars
-        self.updateBars()
     }
     
     deinit {
