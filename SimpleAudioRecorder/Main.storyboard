@@ -30,7 +30,7 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="frr-lb-cum">
                                                 <rect key="frame" x="42" y="0.0" width="298" height="31"/>
                                             </slider>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydd-Rk-3kw">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="–0:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydd-Rk-3kw">
                                                 <rect key="frame" x="346" y="0.0" width="36" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -86,7 +86,7 @@
                         <outlet property="audioVisualizer" destination="uJ3-m3-5as" id="u8o-Jm-bKb"/>
                         <outlet property="playButton" destination="dao-6S-lFj" id="Ot6-ru-6Pv"/>
                         <outlet property="recordButton" destination="xZ9-zM-R9O" id="yKO-Fn-qVC"/>
-                        <outlet property="timeLabel" destination="lrg-6K-xsh" id="1Oa-fA-nQV"/>
+                        <outlet property="timeElapsedLabel" destination="lrg-6K-xsh" id="1Oa-fA-nQV"/>
                         <outlet property="timeRemainingLabel" destination="Ydd-Rk-3kw" id="81T-1V-ACm"/>
                         <outlet property="timeSlider" destination="frr-lb-cum" id="SmJ-0n-6Dx"/>
                     </connections>
