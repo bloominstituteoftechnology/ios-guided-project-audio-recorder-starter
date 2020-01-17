@@ -15,6 +15,7 @@ class AudioRecorderController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var timeRemainingLabel: UILabel!
     @IBOutlet weak var timeSlider: UISlider!
+    @IBOutlet weak var audioVisualizer: AudioVisualizer!
 	
 	private lazy var timeFormatter: DateComponentsFormatter = {
 		let formatting = DateComponentsFormatter()
@@ -37,11 +38,11 @@ class AudioRecorderController: UIViewController {
 	}
 
 
-    @IBAction func playButtonPressed(_ sender: Any) {
+    @IBAction func togglePlayback(_ sender: Any) {
 
 	}
     
-    @IBAction func recordButtonPressed(_ sender: Any) {
+    @IBAction func toggleRecording(_ sender: Any) {
     
     }
 }
