@@ -8,7 +8,7 @@
 
 import UIKit
 
-//@IBDesignable
+@IBDesignable
 public class AudioVisualizer: UIView {
     
     // MARK: IBInspectable Properties
@@ -100,6 +100,14 @@ public class AudioVisualizer: UIView {
         
         var newBars = [UIView]()
         
+        
+        // Make sure the width of a bar and spacing is greater than 0, and that the available width is also greater than 0
+        guard round(barWidth) > 0, barSpacing >= 0, bounds.width > 0, bounds.height > 0 else {
+            // Not enough information to create a single bar, so bail early
+            bars = []
+            return
+        }
+        
         // Calculate number of bars we will be able to display
         var numberOfBarsToCreate = Int(bounds.width/(barWidth + barSpacing))
         
@@ -107,7 +115,7 @@ public class AudioVisualizer: UIView {
         func createBar(_ positionFromCenter: Int) {
             let bar = UIView(frame: frame(forBar: positionFromCenter))
             bar.backgroundColor = barColor
-            bar.layer.cornerRadius = (barCornerRadius < 0 || barCornerRadius > barWidth/2) ? floor(barWidth/2) : barCornerRadius
+            bar.layer.cornerRadius = (barCornerRadius < 0 || barCornerRadius > barWidth/2) ? floor(barWidth/3) : barCornerRadius
             
             numberOfBarsToCreate -= 1
             newBars.append(bar)
@@ -165,7 +173,15 @@ public class AudioVisualizer: UIView {
         
         // Trim the end of the values array if there are too many for the number of bars
         let currentCount = values.count
-        let maxCount = bars.count/2 + 1
+        let maxCount = (bars.count + 1)/2
+        /*
+         Note that the amount of bars will always be either 0, or an odd number (since the bars are counted in pairs after the first central bar), so we chose a "transformation" (a mathematical function) that satisfies this: value index = floor((bar index + 1)/2)
+         
+         Bar index:          0 1 2 3 4 5 6 7 8 9 ...
+          (valid bar index): 0 1 - 3 - 5 - 7 - 9 ...
+         Value index:        0 1 1 2 2 3 3 4 4 5 ...
+         
+         */
         if currentCount > maxCount {
             values.removeSubrange(maxCount ..< currentCount)
         }
@@ -186,6 +202,7 @@ public class AudioVisualizer: UIView {
         // Check if the values are empty
         let totalValue = values.reduce(0.0) { $0 + $1 }
         if totalValue <= 0.000001 {
+            // Note that total value may never reach 0, but this is small enough to clear everything out
             decayTimer?.invalidate()
             decayTimer = nil
         }
