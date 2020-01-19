@@ -257,15 +257,15 @@ public class AudioVisualizer: UIView {
     // MARK: - Public Methods
     
     /// Add a value to the visualizer. Be sure to call `AVAudioPlayer.isMeteringEnabled = true`, and `AVAudioPlayer.updateMeters()` before every call to `AVAudioPlayer.averagePower(forChannel: 0)`
-    /// - Parameter decibleValue: The value you would get out of `AVAudioPlayer.averagePower(forChannel: 0)`
-    public func addValue(decibleValue: Float) {
-        addValue(decibleValue: Double(decibleValue))
+    /// - Parameter decibelValue: The value you would get out of `AVAudioPlayer.averagePower(forChannel: 0)`
+    public func addValue(decibelValue: Float) {
+        addValue(decibelValue: Double(decibelValue))
     }
     
     /// Add a value to the visualizer. Be sure to call `AVAudioPlayer.isMeteringEnabled = true`, and `AVAudioPlayer.updateMeters()` before every call to `AVAudioPlayer.averagePower(forChannel: 0)`
-    /// - Parameter decibleValue: The value you would get out of `AVAudioPlayer.averagePower(forChannel: 0)`
-    public func addValue(decibleValue: Double) {
-        let normalizedValue = __exp10(decibleValue/20)
+    /// - Parameter decibelValue: The value you would get out of `AVAudioPlayer.averagePower(forChannel: 0)`
+    public func addValue(decibelValue: Double) {
+        let normalizedValue = __exp10(decibelValue/20)
         
         newestValue = normalizedValue
         
