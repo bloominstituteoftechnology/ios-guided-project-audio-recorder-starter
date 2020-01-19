@@ -27,6 +27,9 @@ class AudioRecorderController: UIViewController {
 		formatting.allowedUnits = [.minute, .second]
 		return formatting
 	}()
+    
+    
+    // MARK: - View Controller Lifecycle
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
