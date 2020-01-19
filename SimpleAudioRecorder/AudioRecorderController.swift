@@ -54,11 +54,15 @@ class AudioRecorderController: UIViewController {
     // MARK: - Actions
 
     @IBAction func togglePlayback(_ sender: Any) {
-
+        
 	}
     
-    @IBAction func toggleRecording(_ sender: Any) {
+    @IBAction func updateCurrentTime(_ sender: UISlider) {
+        
+    }
     
+    @IBAction func toggleRecording(_ sender: Any) {
+        
     }
 }
 
