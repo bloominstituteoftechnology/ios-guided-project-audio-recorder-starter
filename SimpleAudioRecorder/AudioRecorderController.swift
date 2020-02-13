@@ -16,23 +16,23 @@ class AudioRecorderController: UIViewController {
     @IBOutlet weak var timeRemainingLabel: UILabel!
     @IBOutlet weak var timeSlider: UISlider!
     @IBOutlet weak var audioVisualizer: AudioVisualizer!
-	
-	private lazy var timeIntervalFormatter: DateComponentsFormatter = {
+    
+    private lazy var timeIntervalFormatter: DateComponentsFormatter = {
         // NOTE: DateComponentFormatter is good for minutes/hours/seconds
         // DateComponentsFormatter is not good for milliseconds, use DateFormatter instead)
         
-		let formatting = DateComponentsFormatter()
-		formatting.unitsStyle = .positional // 00:00  mm:ss
-		formatting.zeroFormattingBehavior = .pad
-		formatting.allowedUnits = [.minute, .second]
-		return formatting
-	}()
+        let formatting = DateComponentsFormatter()
+        formatting.unitsStyle = .positional // 00:00  mm:ss
+        formatting.zeroFormattingBehavior = .pad
+        formatting.allowedUnits = [.minute, .second]
+        return formatting
+    }()
     
     
     // MARK: - View Controller Lifecycle
-	
-	override func viewDidLoad() {
-		super.viewDidLoad()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         // Use a font that won't jump around as values change
         timeElapsedLabel.font = UIFont.monospacedDigitSystemFont(ofSize: timeElapsedLabel.font.pointSize,
@@ -41,7 +41,7 @@ class AudioRecorderController: UIViewController {
                                                                    weight: .regular)
         
         
-	}
+    }
     
     
     // MARK: - Playback
@@ -56,7 +56,7 @@ class AudioRecorderController: UIViewController {
     
     @IBAction func togglePlayback(_ sender: Any) {
         
-	}
+    }
     
     @IBAction func updateCurrentTime(_ sender: UISlider) {
         
