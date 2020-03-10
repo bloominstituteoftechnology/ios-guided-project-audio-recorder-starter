@@ -10,12 +10,12 @@ import UIKit
 
 class AudioRecorderController: UIViewController {
     
-    @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var recordButton: UIButton!
-    @IBOutlet weak var timeElapsedLabel: UILabel!
-    @IBOutlet weak var timeRemainingLabel: UILabel!
-    @IBOutlet weak var timeSlider: UISlider!
-    @IBOutlet weak var audioVisualizer: AudioVisualizer!
+    @IBOutlet var playButton: UIButton!
+    @IBOutlet var recordButton: UIButton!
+    @IBOutlet var timeElapsedLabel: UILabel!
+    @IBOutlet var timeRemainingLabel: UILabel!
+    @IBOutlet var timeSlider: UISlider!
+    @IBOutlet var audioVisualizer: AudioVisualizer!
     
     private lazy var timeIntervalFormatter: DateComponentsFormatter = {
         // NOTE: DateComponentFormatter is good for minutes/hours/seconds
